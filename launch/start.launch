@@ -1,0 +1,11 @@
+<launch>
+	<arg name="global_file" default="global_param.yaml" />
+	<arg name="inner_file" default="dwa.yaml" />
+	<!-- 在node节点外部添加yaml文件，加载到参数服务器 -->
+	<rosparam command="load" file="$(find learning_load_yaml)/param/$(arg global_file)" />
+
+	<node name="load_yaml_node" pkg="learning_load_yaml" type="load_yaml" output="screen" ns="node_ns">
+		<!-- 在node节点内部添加yaml参数 -->
+		<rosparam command="load" file="$(find learning_load_yaml)/param/$(arg inner_file)" />
+	</node>
+</launch>

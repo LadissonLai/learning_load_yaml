@@ -1,0 +1,18 @@
+car_name: inner_name_BBB
+DWAParams:
+  # 车辆尺寸
+  car_width: 1.5
+  car_length: 4.0
+  # 算法参数
+  v_resolution: 0.2
+  w_resolution: 0.2
+  # bool 参数设置
+  isRecover: true
+
+  # 数组
+  origin_pose: [1.0, 1.0, 1.57]
+  # 类
+  scan:
+    scan_topic: /limo/scan
+    size: 3
+    data: [1, 2, 3]

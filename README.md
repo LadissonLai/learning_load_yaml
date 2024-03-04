@@ -2,7 +2,10 @@
 
 ROS官方提供了自动加载yaml文件的功能，并且集成到了launch文件里面，只需要使用rosparam标签就能把yaml配置文件加载到ros的参数服务器里面，然后使用nodehandle.getParam()函数就可以方便的使用了。
 
-下面写下关键的使用步骤。
+下面给出关键的使用步骤：
+1. 编写yaml文件。注: 避免使用-分割数组，否则容易产生bug，数组使用[]，逗号分隔元素。
+2. 编写launch文件，加载yaml。核心命令<rosparam command="load" file="filepath" />
+3. cpp文件中访问yaml。直接使用nodehandle.getParam方法，注意参数的命名空间即可。
 
 ## launch文件
 

@@ -45,3 +45,6 @@ catkin_make
 source ./devel/setup.bash
 roslaunch learning_load_yaml start.launch
 ```
+## 完整项目
+完整项目请查看github[仓库](https://github.com/LadissonLai/learning_load_yaml)。
+
